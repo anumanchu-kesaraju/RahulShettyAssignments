@@ -19,7 +19,6 @@ def page(playwright:Playwright):
         browser= playwright.chromium.launch(headless=False)
     elif data["browser_name"] == "firefox":
         browser= playwright.firefox.launch(headless=False)
-
     page=browser.new_page()
     page.goto(data["url"])
     yield page
