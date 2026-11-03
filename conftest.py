@@ -13,7 +13,7 @@ def get_data(path):
 @pytest.fixture(scope="module")
 def page(playwright:Playwright):
 
-    data = get_data("data.json")
+    data = get_data("Data/data.json")
 
     if data["browser_name"] == "chromium":
         browser= playwright.chromium.launch(headless=False)

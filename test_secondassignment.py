@@ -18,7 +18,7 @@ def test_secondassignmentstep2(page,browser):
     print("first page",page.get_by_role("textbox", name="Email").input_value())
     context = browser.new_context()
     page1 = context.new_page()
-    data= get_data(r"C:\Users\Siri\PycharmProjects\PythonProject\RahulShettyAssignments\data.json")
+    data= get_data(r"/Data/data.json")
     page1.goto(data["url"])
     expect(page1.get_by_text(" Sign in to EventHub")).to_be_visible()
     assert page1.get_by_role("textbox",name="Email").input_value() == ""

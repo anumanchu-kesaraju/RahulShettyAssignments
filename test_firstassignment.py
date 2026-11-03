@@ -16,6 +16,8 @@ def test_firstassignmentstep2(page):
     #for assignment 2 createda fixture to got page
     #page.goto("https://eventhub.rahulshettyacademy.com")
     expect(page.get_by_role("textbox", name="password")).to_be_visible()
-    assert "/login" in page.url
+    #Better to sure expect as it might take some time to load the page
+    expect(page).to_have_url("https://eventhub.rahulshettyacademy.com/login")
+    #assert "/login" in page.url
 
 
